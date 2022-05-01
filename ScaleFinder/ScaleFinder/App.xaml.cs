@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ScaleFinder.Views;
 
 namespace ScaleFinder
 {
@@ -10,7 +11,7 @@ namespace ScaleFinder
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new FinderPage();
         }
 
         protected override void OnStart()

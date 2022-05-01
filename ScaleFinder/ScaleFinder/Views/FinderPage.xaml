@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScaleFinder.Views.FinderPage"
+             xmlns:views="clr-namespace:ScaleFinder.Views">
+    <ContentPage.Content>
+        <StackLayout>
+            <views:ToggleButton Text="Hello!"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
