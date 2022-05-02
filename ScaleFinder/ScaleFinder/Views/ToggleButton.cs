@@ -10,6 +10,7 @@ namespace ScaleFinder.Views
         public static BindableProperty IsToggledProperty =
             BindableProperty.Create("IsToggled", typeof(bool), typeof(ToggleButton), false,
                                     propertyChanged: OnIsToggledChanged);
+
         public bool IsToggled
         {
             get { return (bool)GetValue(IsToggledProperty); }

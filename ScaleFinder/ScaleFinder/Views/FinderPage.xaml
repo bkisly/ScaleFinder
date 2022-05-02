@@ -2,10 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScaleFinder.Views.FinderPage"
-             xmlns:views="clr-namespace:ScaleFinder.Views">
-    <ContentPage.Content>
-        <StackLayout>
-            <views:ToggleButton Text="Hello!"/>
-        </StackLayout>
-    </ContentPage.Content>
+             xmlns:views="clr-namespace:ScaleFinder.Views"
+             Padding="10">
+    
+    <StackLayout Spacing="10">
+        <Label Text="Selected sounds:" FontSize="18" HorizontalTextAlignment="Center"/>
+
+        <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="Center" AlignItems="Center">
+            <views:ToggleButton Text="C"/>
+            <views:ToggleButton Text="C#/Db"/>
+            <views:ToggleButton Text="D"/>
+            <views:ToggleButton Text="D#/Eb"/>
+            <views:ToggleButton Text="E"/>
+            <views:ToggleButton Text="F"/>
+            <views:ToggleButton Text="F#/Gb"/>
+            <views:ToggleButton Text="G"/>
+            <views:ToggleButton Text="G#/Ab"/>
+            <views:ToggleButton Text="A"/>
+            <views:ToggleButton Text="A#/Bb"/>
+            <views:ToggleButton Text="B"/>
+        </FlexLayout>
+
+        <Label Text="Matching scales:" FontSize="18" HorizontalTextAlignment="Center"/>
+        <ListView SelectionMode="None"/>
+    </StackLayout>
 </ContentPage>
