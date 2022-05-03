@@ -3,27 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScaleFinder.Views.FinderPage"
              xmlns:views="clr-namespace:ScaleFinder.Views"
-             Padding="10">
+             xmlns:viewModels="clr-namespace:ScaleFinder.ViewModels"
+             Padding="20">
+
+    <ContentPage.Resources>
+        <viewModels:ScaleFinderViewModel x:Name="viewModel" x:Key="viewModel"/>
+    </ContentPage.Resources>
     
-    <StackLayout Spacing="10">
+    <StackLayout Spacing="10" BindingContext="{StaticResource viewModel}">
         <Label Text="Selected sounds:" FontSize="18" HorizontalTextAlignment="Center"/>
 
-        <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="Center" AlignItems="Center">
-            <views:ToggleButton Text="C"/>
-            <views:ToggleButton Text="C#/Db"/>
-            <views:ToggleButton Text="D"/>
-            <views:ToggleButton Text="D#/Eb"/>
-            <views:ToggleButton Text="E"/>
-            <views:ToggleButton Text="F"/>
-            <views:ToggleButton Text="F#/Gb"/>
-            <views:ToggleButton Text="G"/>
-            <views:ToggleButton Text="G#/Ab"/>
-            <views:ToggleButton Text="A"/>
-            <views:ToggleButton Text="A#/Bb"/>
-            <views:ToggleButton Text="B"/>
+        <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="Center" AlignItems="Center" Margin="0, 0, 0, 20">
+            <views:ToggleButton Text="C" CommandParameter="0" Toggled="SoundButton_Toggled"/>
+            <views:ToggleButton Text="C#/Db" CommandParameter="1" Toggled="SoundButton_Toggled"/>
+            <views:ToggleButton Text="D" CommandParameter="2" Toggled="SoundButton_Toggled"/>
+            <views:ToggleButton Text="D#/Eb" CommandParameter="3" Toggled="SoundButton_Toggled"/>
+            <views:ToggleButton Text="E" CommandParameter="4" Toggled="SoundButton_Toggled"/>
+            <views:ToggleButton Text="F" CommandParameter="5" Toggled="SoundButton_Toggled"/>
+            <views:ToggleButton Text="F#/Gb" CommandParameter="6" Toggled="SoundButton_Toggled"/>
+            <views:ToggleButton Text="G" CommandParameter="7" Toggled="SoundButton_Toggled"/>
+            <views:ToggleButton Text="G#/Ab" CommandParameter="8" Toggled="SoundButton_Toggled"/>
+            <views:ToggleButton Text="A" CommandParameter="9" Toggled="SoundButton_Toggled"/>
+            <views:ToggleButton Text="A#/Bb" CommandParameter="10" Toggled="SoundButton_Toggled"/>
+            <views:ToggleButton Text="B" CommandParameter="11" Toggled="SoundButton_Toggled"/>
         </FlexLayout>
 
         <Label Text="Matching scales:" FontSize="18" HorizontalTextAlignment="Center"/>
-        <ListView SelectionMode="None"/>
+        <ListView SelectionMode="None" ItemsSource="{Binding FilteredScales}" IsGroupingEnabled="True"/>
     </StackLayout>
 </ContentPage>
