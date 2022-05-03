@@ -26,7 +26,7 @@ namespace ScaleFinder.Models
         Minor,
     }
 
-    internal class Scale
+    public class Scale
     {
         public string Name { get; private set; }
         public ScaleType ScaleType { get; private set; }

@@ -32,5 +32,15 @@ namespace ScaleFinder.Views
 
             viewModel.UpdateScales();
         }
+
+        private async void ScalesListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if(e.SelectedItem is Models.Scale selectedScale)
+            {
+                await Navigation.PushAsync(new ScaleDetailsPage(selectedScale));
+            }
+
+            scalesListView.SelectedItem = null;
+        }
     }
 }

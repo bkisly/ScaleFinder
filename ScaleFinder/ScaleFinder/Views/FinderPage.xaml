@@ -4,7 +4,7 @@
              x:Class="ScaleFinder.Views.FinderPage"
              xmlns:views="clr-namespace:ScaleFinder.Views"
              xmlns:viewModels="clr-namespace:ScaleFinder.ViewModels"
-             Padding="20">
+             Padding="20" Title="ScaleFinder">
 
     <ContentPage.Resources>
         <viewModels:ScaleFinderViewModel x:Name="viewModel" x:Key="viewModel"/>
@@ -29,6 +29,7 @@
         </FlexLayout>
 
         <Label Text="Matching scales:" FontSize="18" HorizontalTextAlignment="Center"/>
-        <ListView SelectionMode="None" ItemsSource="{Binding FilteredScales}" IsGroupingEnabled="True"/>
+        <ListView x:Name="scalesListView" ItemsSource="{Binding FilteredScales}" IsGroupingEnabled="True"
+                  ItemSelected="ScalesListView_ItemSelected"/>
     </StackLayout>
 </ContentPage>

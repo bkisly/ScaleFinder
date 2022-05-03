@@ -11,7 +11,7 @@ namespace ScaleFinder
         {
             InitializeComponent();
 
-            MainPage = new FinderPage();
+            MainPage = new NavigationPage(new FinderPage());
         }
 
         protected override void OnStart()
