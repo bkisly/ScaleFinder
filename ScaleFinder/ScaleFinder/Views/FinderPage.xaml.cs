@@ -15,6 +15,22 @@ namespace ScaleFinder.Views
         public FinderPage()
         {
             InitializeComponent();
+            viewModel.UpdateScales();
+        }
+
+        private void SoundButton_Toggled(object sender, ToggledEventArgs e)
+        {
+            ToggleButton senderButton = sender as ToggleButton;
+
+            if (int.TryParse(senderButton.CommandParameter.ToString(), out int parameter))
+            {
+                Models.Sound parameterSound = (Models.Sound)parameter;
+
+                if (e.Value) viewModel.SelectedSounds.Add(parameterSound);
+                else viewModel.SelectedSounds.Remove(parameterSound);
+            }
+
+            viewModel.UpdateScales();
         }
     }
 }
