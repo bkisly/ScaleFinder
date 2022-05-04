@@ -47,6 +47,8 @@
         </Style>
 
         <Style x:Key="ScaleListView" TargetType="ListView">
+            <Setter Property="SeparatorVisibility" Value="None"/>
+
             <Setter Property="ItemTemplate">
                 <Setter.Value>
                     <DataTemplate>
