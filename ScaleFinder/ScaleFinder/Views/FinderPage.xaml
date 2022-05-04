@@ -4,32 +4,42 @@
              x:Class="ScaleFinder.Views.FinderPage"
              xmlns:views="clr-namespace:ScaleFinder.Views"
              xmlns:viewModels="clr-namespace:ScaleFinder.ViewModels"
-             Padding="20" Title="ScaleFinder">
+             Title="ScaleFinder" BackgroundColor="Black"
+             >
 
     <ContentPage.Resources>
         <viewModels:ScaleFinderViewModel x:Name="viewModel" x:Key="viewModel"/>
     </ContentPage.Resources>
-    
-    <StackLayout Spacing="10" BindingContext="{StaticResource viewModel}">
-        <Label Text="Selected sounds:" FontSize="18" HorizontalTextAlignment="Center"/>
 
-        <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="Center" AlignItems="Center" Margin="0, 0, 0, 20">
-            <views:ToggleButton Text="C" CommandParameter="0" Toggled="SoundButton_Toggled"/>
-            <views:ToggleButton Text="C#/Db" CommandParameter="1" Toggled="SoundButton_Toggled"/>
-            <views:ToggleButton Text="D" CommandParameter="2" Toggled="SoundButton_Toggled"/>
-            <views:ToggleButton Text="D#/Eb" CommandParameter="3" Toggled="SoundButton_Toggled"/>
-            <views:ToggleButton Text="E" CommandParameter="4" Toggled="SoundButton_Toggled"/>
-            <views:ToggleButton Text="F" CommandParameter="5" Toggled="SoundButton_Toggled"/>
-            <views:ToggleButton Text="F#/Gb" CommandParameter="6" Toggled="SoundButton_Toggled"/>
-            <views:ToggleButton Text="G" CommandParameter="7" Toggled="SoundButton_Toggled"/>
-            <views:ToggleButton Text="G#/Ab" CommandParameter="8" Toggled="SoundButton_Toggled"/>
-            <views:ToggleButton Text="A" CommandParameter="9" Toggled="SoundButton_Toggled"/>
-            <views:ToggleButton Text="A#/Bb" CommandParameter="10" Toggled="SoundButton_Toggled"/>
-            <views:ToggleButton Text="B" CommandParameter="11" Toggled="SoundButton_Toggled"/>
-        </FlexLayout>
+    <AbsoluteLayout>
+        <Image Source="{views:EmbeddedImage ScaleFinder.EmbeddedResources.FinderBackground.jpg}" 
+               AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" 
+               Aspect="AspectFill" Opacity="0.5"/>
 
-        <Label Text="Matching scales:" FontSize="18" HorizontalTextAlignment="Center"/>
-        <ListView x:Name="scalesListView" ItemsSource="{Binding FilteredScales}" IsGroupingEnabled="True"
-                  ItemSelected="ScalesListView_ItemSelected"/>
-    </StackLayout>
+        <StackLayout Spacing="10" Padding="20" BindingContext="{StaticResource viewModel}"
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <Label Text="Selected sounds:" HorizontalTextAlignment="Center"/>
+
+            <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="Center" AlignItems="Center" Margin="0, 0, 0, 20">
+                <views:ToggleButton Text="C" CommandParameter="0" Toggled="SoundButton_Toggled"/>
+                <views:ToggleButton Text="C#/Db" CommandParameter="1" Toggled="SoundButton_Toggled"/>
+                <views:ToggleButton Text="D" CommandParameter="2" Toggled="SoundButton_Toggled"/>
+                <views:ToggleButton Text="D#/Eb" CommandParameter="3" Toggled="SoundButton_Toggled"/>
+                <views:ToggleButton Text="E" CommandParameter="4" Toggled="SoundButton_Toggled"/>
+                <views:ToggleButton Text="F" CommandParameter="5" Toggled="SoundButton_Toggled"/>
+                <views:ToggleButton Text="F#/Gb" CommandParameter="6" Toggled="SoundButton_Toggled"/>
+                <views:ToggleButton Text="G" CommandParameter="7" Toggled="SoundButton_Toggled"/>
+                <views:ToggleButton Text="G#/Ab" CommandParameter="8" Toggled="SoundButton_Toggled"/>
+                <views:ToggleButton Text="A" CommandParameter="9" Toggled="SoundButton_Toggled"/>
+                <views:ToggleButton Text="A#/Bb" CommandParameter="10" Toggled="SoundButton_Toggled"/>
+                <views:ToggleButton Text="B" CommandParameter="11" Toggled="SoundButton_Toggled"/>
+            </FlexLayout>
+
+            <BoxView Color="#f0f0f0" WidthRequest="500" HeightRequest="1" Margin="100, 0, 100, 10"/>
+
+            <Label Text="Matching scales:" HorizontalTextAlignment="Center"/>
+            <ListView x:Name="scalesListView" ItemsSource="{Binding FilteredScales}" IsGroupingEnabled="True"
+                  Style="{StaticResource ScaleListView}" ItemSelected="ScalesListView_ItemSelected"/>
+        </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>

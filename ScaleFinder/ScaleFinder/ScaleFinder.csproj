@@ -11,6 +11,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="EmbeddedResources\FinderBackground.jpg" />
+    <None Remove="EmbeddedResources\ScaleDetailsBackground.jpg" />
+    <None Remove="EmbeddedResources\TCM.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedResources\FinderBackground.jpg" />
+    <EmbeddedResource Include="EmbeddedResources\ScaleDetailsBackground.jpg" />
+    <EmbeddedResource Include="EmbeddedResources\TCM.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>

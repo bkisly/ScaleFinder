@@ -11,7 +11,11 @@ namespace ScaleFinder
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new FinderPage());
+            MainPage = new NavigationPage(new FinderPage())
+            {
+                BarBackgroundColor = Color.FromHex("#323232"),
+                BarTextColor = Color.FromHex("#f0f0f0"),
+            };
         }
 
         protected override void OnStart()
