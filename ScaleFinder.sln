@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaleFinder.UWP", "ScaleFin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaleFinder.Android", "ScaleFinder\ScaleFinder.Android\ScaleFinder.Android.csproj", "{2E403A33-887E-42ED-94CB-07C4468C3632}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaleFinder", "ScaleFinder\ScaleFinder\ScaleFinder.csproj", "{820AC8E1-7494-4370-A4BE-2D1B1D5A4701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScaleFinder", "ScaleFinder\ScaleFinder\ScaleFinder.csproj", "{820AC8E1-7494-4370-A4BE-2D1B1D5A4701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaleFinderAPI", "ScaleFinderAPI\ScaleFinderAPI.csproj", "{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,22 @@ Global
 		{820AC8E1-7494-4370-A4BE-2D1B1D5A4701}.Release|x86.ActiveCfg = Release|Any CPU
 		{820AC8E1-7494-4370-A4BE-2D1B1D5A4701}.Release|x86.Build.0 = Release|Any CPU
 		{820AC8E1-7494-4370-A4BE-2D1B1D5A4701}.Release|x86.Deploy.0 = Release|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Debug|ARM.Build.0 = Debug|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Debug|x64.Build.0 = Debug|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Debug|x86.Build.0 = Debug|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Release|ARM.ActiveCfg = Release|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Release|ARM.Build.0 = Release|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Release|x64.ActiveCfg = Release|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Release|x64.Build.0 = Release|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Release|x86.ActiveCfg = Release|Any CPU
+		{9B9212D6-B7C7-4DFA-8550-B80A98819FA9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
