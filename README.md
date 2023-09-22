@@ -2,14 +2,14 @@
 
 ## Overview
 
-An application for Android and Windows, which helps finding matching musical scales accordingly to selected sounds.
+An application for Android and Windows, which helps find matching musical scales accordingly to selected sounds.
 
-The app returns filtered list of scales, which contain the sounds that were selected by the user. It is also possible to view details of the particular scale after selecting it on the list.
+The app returns a filtered list of musical scales, which contains sounds selected by the user. It is also possible to view details of a particular scale after selecting it on the list.
 
-## Future of the project
+## The future of the project
 
-Currently, information about available scales is hard-coded. However, an API is being created in order to download inforation about them from the SQL database. In the future, API and database will be stored on Azure services.
+Currently, information about available scales is hard-coded. However, an API is being created in order to download inforation about them from a SQL database. In the future, API and database will be stored at Azure services.
 
 ## Download
 
-View releases in order to download proper package for Android or Windows.
+View **releases** in order to download proper packages for Android or Windows.
